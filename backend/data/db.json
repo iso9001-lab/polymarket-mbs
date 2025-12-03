@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "dc29b687-6f56-4c1a-9761-c98f1c62b407",
+      "username": "Fabischoff",
+      "passwordHash": "$2a$08$WTwE.tKlL8M0XX8.AToIieWPIxOZbrM1HuCtWGuvULaN4foK4TX2a"
+    }
+  ],
+  "markets": [
+    {
+      "id": "market-1",
+      "title": "Will Bitcoin be above $100k on 2026-01-01?",
+      "description": "A simple binary market about BTC price.",
+      "qYes": 10,
+      "qNo": 5,
+      "b": 20
+    },
+    {
+      "id": "market-2",
+      "title": "Will NASA launch a crewed mission in 2026?",
+      "description": "Event-based prediction.",
+      "qYes": 2,
+      "qNo": 8,
+      "b": 10
+    }
+  ],
+  "trades": []
+}

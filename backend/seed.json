@@ -1,0 +1,18 @@
+[
+  {
+    "id": "market-1",
+    "title": "Will Bitcoin be above $100k on 2026-01-01?",
+    "description": "A simple binary market about BTC price.",
+    "qYes": 10,
+    "qNo": 5,
+    "b": 20
+  },
+  {
+    "id": "market-2",
+    "title": "Will NASA launch a crewed mission in 2026?",
+    "description": "Event-based prediction.",
+    "qYes": 2,
+    "qNo": 8,
+    "b": 10
+  }
+]

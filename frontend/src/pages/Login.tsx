@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Login({ onDone }: { onDone: () => void }) {
+export default function Login({ onDone }: { onDone: (userId: string, isAdmin: boolean) => void }) {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -14,8 +14,11 @@ export default function Login({ onDone }: { onDone: () => void }) {
     }
     const data = await res.json();
     localStorage.setItem('token', data.token);
+    localStorage.setItem('userId', data.user.id);
+    localStorage.setItem('balance', String(data.user.balance || 1000));
+    localStorage.setItem('isAdmin', String(data.user.isAdmin || false));
     alert('Logged in');
-    onDone();
+    onDone(data.user.id, data.user.isAdmin || false);
   }
 
   return (

@@ -10,9 +10,16 @@ export default async function authRoutes(fastify: FastifyInstance) {
     const existing = db.findUserByUsername(body.username);
     if (existing) return rep.status(400).send({ error: 'username taken' });
     const hash = bcrypt.hashSync(body.password, 8);
-    const user = { id: uuidv4(), username: body.username, passwordHash: hash };
+    const user = {
+      id: uuidv4(),
+      username: body.username,
+      passwordHash: hash,
+      balance: 1000,
+      positions: {},
+      isAdmin: false
+    };
     db.addUser(user);
-    return { id: user.id, username: user.username };
+    return { id: user.id, username: user.username, isAdmin: user.isAdmin };
   });
 
   fastify.post('/login', async (req, rep) => {
@@ -23,6 +30,6 @@ export default async function authRoutes(fastify: FastifyInstance) {
     const ok = bcrypt.compareSync(body.password, user.passwordHash);
     if (!ok) return rep.status(401).send({ error: 'invalid' });
     // For simplicity return a token that's just the user id
-    return { token: user.id, user: { id: user.id, username: user.username } };
+    return { token: user.id, user: { id: user.id, username: user.username, balance: user.balance, isAdmin: user.isAdmin || false } };
   });
 }

@@ -41,5 +41,28 @@ npm run dev
 Notes:
 - If you already have the backend or frontend running in other terminals, stop them first to avoid port conflicts before running the root `dev`.
 - Backend is served on `http://localhost:4000` and frontend on `http://localhost:5173` (Vite). The frontend proxies `/api/*` to the backend.
+
+## Trading Rules
+
+Die folgenden Regeln gelten für alle Trades:
+
+1. **Keine negativen Deltas**: Benutzer können nur Shares kaufen, nicht verkaufen. Damit wird sichergestellt, dass Benutzer kein Geld zurückbekommen.
+
+2. **Maximal 10 Shares pro Trade**: Jeder einzelne Trade kann maximal 10 Shares umfassen.
+   - Frontend Validierung: Eingabefeld prüft auf max. 10
+   - Backend Validierung: Fehler wenn deltaYes oder deltaNo > 10
+
+3. **Maximal $100 pro Benutzer und pro Markt**: Pro Benutzer kann maximal $100 insgesamt pro Markt ausgegeben werden.
+   - Dies ist das kumulative Limit über alle Trades eines einzelnen Benutzers auf diesem Markt
+   - Frontend Validierung: "Spend exact cost" limitiert auf max. $100 pro Trade; kumulative Prüfungen erfolgen serverseitig
+   - Backend Validierung: Prüft `getTotalSpentByUserOnMarket(userId, marketId)` + neue Kosten ≤ $100
+
+## Implementation Details
+
+- **LMSR Logic**: Implementiert in `backend/src/lmsr/lmsr.ts`
+- **Trade Handling**: Backend-Route `/markets/:id/buy` verwaltet beide Trades (YES und NO)
+- **Database**: Einfache JSON-DB unter `backend/data/db.json`
+- **Frontend Components**: TradeForm-Komponente mit Trade-Type-Selector (YES/NO)
+
 # polymarket-mbs
-Prediction-Market-Projekt „Polymarket-MBS“ mit Backend ↔ Frontend
+Prediction-Market-Projekt „Polymarket-MBS" mit Backend ↔ Frontend

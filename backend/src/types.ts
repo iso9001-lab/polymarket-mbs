@@ -1,7 +1,17 @@
+export interface Position {
+  yesShares: number;
+  noShares: number;
+}
+
 export interface User {
   id: string;
   username: string;
   passwordHash: string;
+  balance: number;
+  positions: {
+    [marketId: string]: Position;
+  };
+  isAdmin?: boolean;
 }
 
 export interface Market {
@@ -11,6 +21,8 @@ export interface Market {
   qYes: number;
   qNo: number;
   b: number;
+  status?: 'open' | 'resolved';
+  result?: 'YES' | 'NO';
 }
 
 export interface Trade {
@@ -18,6 +30,7 @@ export interface Trade {
   marketId: string;
   userId?: string;
   deltaYes: number;
+  deltaNo: number;
   cost: number;
   timestamp: number;
 }

@@ -3,26 +3,315 @@
     {
       "id": "dc29b687-6f56-4c1a-9761-c98f1c62b407",
       "username": "Fabischoff",
-      "passwordHash": "$2a$08$WTwE.tKlL8M0XX8.AToIieWPIxOZbrM1HuCtWGuvULaN4foK4TX2a"
+      "passwordHash": "$2a$08$WTwE.tKlL8M0XX8.AToIieWPIxOZbrM1HuCtWGuvULaN4foK4TX2a",
+      "positions": {
+        "market-6": {
+          "yesShares": 0,
+          "noShares": 68.85192396146377
+        }
+      },
+      "balance": null
+    },
+    {
+      "id": "46484632-6051-4ff2-9eba-23cd3db5386b",
+      "username": "Fabian",
+      "passwordHash": "$2a$08$.4XtgPBPy/c.xBVlypdCfeWaNNlWHSbYmqCFwPXGKUbKxxvMfi/um",
+      "balance": 897.0689837706076,
+      "positions": {
+        "market-1": {
+          "yesShares": 0,
+          "noShares": 10
+        },
+        "market-2": {
+          "yesShares": 113.79545038581918,
+          "noShares": 0
+        }
+      }
+    },
+    {
+      "id": "23347b4c-48cd-4d10-ab1b-cd2207030e9e",
+      "username": "admin",
+      "passwordHash": "$2a$08$l3D6CoA5H00UF8w2zTzFH.fnRZaVBN6wPb6iaQLN2XWx9znRUualO",
+      "balance": 10000,
+      "positions": {},
+      "isAdmin": true
+    },
+    {
+      "id": "feb6631b-20a5-41f8-9260-21cc9ede3584",
+      "username": "trader1",
+      "passwordHash": "$2a$08$wwK51YB1C.etAj7MCKRrsOugy3RPaCm9NyFztIIi5icJJ8e12/vc.",
+      "balance": 1000,
+      "positions": {},
+      "isAdmin": false
+    },
+    {
+      "id": "2b8fb3ac-ffe5-47cc-8426-643148a3452d",
+      "username": "trader2",
+      "passwordHash": "$2a$08$lUdzhEqYVC2A/3VDh/oF7uKChd.6Q9z2jZR9WJKj/CK78IgV.yb8m",
+      "balance": 1006.8263710103979,
+      "positions": {
+        "market-1": {
+          "yesShares": 5,
+          "noShares": 0
+        },
+        "market-5": {
+          "yesShares": 5,
+          "noShares": 0
+        },
+        "market-3": {
+          "yesShares": 3,
+          "noShares": 0
+        },
+        "market-4": {
+          "yesShares": 3,
+          "noShares": 0
+        }
+      },
+      "isAdmin": false
+    },
+    {
+      "id": "a8fe196f-1919-45d9-90c7-d2b5b490eecf",
+      "username": "alice",
+      "passwordHash": "$2a$08$5m4NZR4QIVcVuD.wkmAAVuRHZ3qPRA4kAzJYAHyvCjgT38o42nfpW",
+      "balance": 1000,
+      "positions": {},
+      "isAdmin": false
+    },
+    {
+      "id": "b1bd1706-759d-44a7-a917-eeabcd041ea5",
+      "username": "bob",
+      "passwordHash": "$2a$08$kTBODKk9pHYrRbzNwRLL3.VUtO1XD76mr7Q6LJB58Ukd9Zk.huWvG",
+      "balance": 1000,
+      "positions": {},
+      "isAdmin": false
     }
   ],
   "markets": [
     {
       "id": "market-1",
-      "title": "Will Bitcoin be above $100k on 2026-01-01?",
-      "description": "A simple binary market about BTC price.",
-      "qYes": 10,
-      "qNo": 5,
-      "b": 20
+      "title": "Will A. tell us at least three anecdotes?",
+      "description": "Binary market about Brazil",
+      "qYes": 158.69345334392693,
+      "qNo": 141,
+      "b": 20,
+      "status": "resolved",
+      "result": "YES"
     },
     {
       "id": "market-2",
-      "title": "Will NASA launch a crewed mission in 2026?",
-      "description": "Event-based prediction.",
-      "qYes": 2,
-      "qNo": 8,
-      "b": 10
+      "title": "Will Louis show up with boat shoes on the first day?",
+      "description": "Event-based prediction",
+      "qYes": 113.79545038581918,
+      "qNo": 0,
+      "b": 20,
+      "status": "resolved",
+      "result": "NO"
+    },
+    {
+      "id": "market-3",
+      "title": "Will Arne drink chocolate milk at least 5 times?",
+      "description": "Event-based prediction",
+      "qYes": 3,
+      "qNo": 0,
+      "b": 20,
+      "status": "resolved",
+      "result": "YES"
+    },
+    {
+      "id": "market-4",
+      "title": "Will Fabian go into Tiffanies?",
+      "description": "Event-based prediction",
+      "qYes": 3,
+      "qNo": 0,
+      "b": 20,
+      "status": "resolved",
+      "result": "YES"
+    },
+    {
+      "id": "market-5",
+      "title": "Will at least one magnum bottle of champagne be ordered?",
+      "description": "Event-based prediction",
+      "qYes": 5,
+      "qNo": 0,
+      "b": 20,
+      "status": "resolved",
+      "result": "YES"
+    },
+    {
+      "id": "market-6",
+      "title": "Will someone explain that Wasn and Wiesn mean the same thing?",
+      "description": "Event-based prediction",
+      "qYes": 0,
+      "qNo": 68.85192396146377,
+      "b": 20
     }
   ],
-  "trades": []
+  "trades": [
+    {
+      "id": "ac64c867-85d2-4f42-9b2f-baf25e7fed99",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 10,
+      "cost": 5.618596,
+      "timestamp": 1764777020075
+    },
+    {
+      "id": "fa5ff077-bbb4-4ee5-86a8-6822352f131e",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": -5,
+      "cost": -2.962751,
+      "timestamp": 1764777034162
+    },
+    {
+      "id": "1c004256-dc48-4056-842e-7dfc8d70124c",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": -10,
+      "cost": -5,
+      "timestamp": 1764777040679
+    },
+    {
+      "id": "14ba00ae-ed35-46c6-90b1-deca51912fd8",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 2,
+      "cost": 0.900353,
+      "timestamp": 1764777049591
+    },
+    {
+      "id": "4b8dbba1-77b6-4282-b141-3beac775ccbb",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 3,
+      "cost": 1.443803,
+      "timestamp": 1764777065603
+    },
+    {
+      "id": "90d01ded-2ccc-4a50-8d6f-43d11028ad2e",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 20,
+      "deltaNo": 0,
+      "cost": 12.40229,
+      "timestamp": 1764778257017
+    },
+    {
+      "id": "f959b499-87e1-421c-b874-24f2f511ad54",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 0,
+      "deltaNo": 30,
+      "cost": 13.216306,
+      "timestamp": 1764778422660
+    },
+    {
+      "id": "f260eea8-be13-45de-af2a-dd6d57c11a7a",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 0,
+      "deltaNo": 51,
+      "cost": 42.443894,
+      "timestamp": 1764778430344
+    },
+    {
+      "id": "983c87b8-80fc-48ac-a948-2addf0ca10cb",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 90,
+      "deltaNo": 0,
+      "cost": 32.289026,
+      "timestamp": 1764778441147
+    },
+    {
+      "id": "8f43013a-2369-4056-aea2-ecdd02821c40",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 43.69345334392695,
+      "deltaNo": 0,
+      "cost": 40,
+      "timestamp": 1764778446825
+    },
+    {
+      "id": "3fca1383-e88c-4250-a776-438073184c9f",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 0,
+      "deltaNo": 50,
+      "cost": 5.054757,
+      "timestamp": 1764778478194
+    },
+    {
+      "id": "17e362f2-fbdb-4996-bbd1-cd7b9c40936b",
+      "marketId": "market-6",
+      "userId": "dc29b687-6f56-4c1a-9761-c98f1c62b407",
+      "deltaYes": 0,
+      "deltaNo": 10,
+      "cost": 5.618596,
+      "timestamp": 1764919744409
+    },
+    {
+      "id": "5825861d-36cf-4bd4-abc1-fe0f9df9f752",
+      "marketId": "market-6",
+      "userId": "dc29b687-6f56-4c1a-9761-c98f1c62b407",
+      "deltaYes": 0,
+      "deltaNo": 58.851923961463775,
+      "cost": 50,
+      "timestamp": 1764919762139
+    },
+    {
+      "id": "ee40e236-ee2e-4c33-87c1-bfaef91bcfb5",
+      "marketId": "market-1",
+      "userId": "46484632-6051-4ff2-9eba-23cd3db5386b",
+      "deltaYes": 0,
+      "deltaNo": 10,
+      "cost": 2.931016,
+      "timestamp": 1764926927725
+    },
+    {
+      "id": "0b506e81-d42a-472a-b145-f0a38f1886bf",
+      "marketId": "market-2",
+      "userId": "46484632-6051-4ff2-9eba-23cd3db5386b",
+      "deltaYes": 113.79545038581918,
+      "deltaNo": 0,
+      "cost": 100,
+      "timestamp": 1764926938512
+    },
+    {
+      "id": "7b30a86d-e438-4055-a572-5d9e1cda32c2",
+      "marketId": "market-1",
+      "userId": "2b8fb3ac-ffe5-47cc-8426-643148a3452d",
+      "deltaYes": 5,
+      "deltaNo": 0,
+      "cost": 3.40539,
+      "timestamp": 1764928312189
+    },
+    {
+      "id": "8b120ed6-17da-4033-b0a3-a4c8d3d384e1",
+      "marketId": "market-5",
+      "userId": "2b8fb3ac-ffe5-47cc-8426-643148a3452d",
+      "deltaYes": 5,
+      "deltaNo": 0,
+      "cost": 2.655845,
+      "timestamp": 1764928324180
+    },
+    {
+      "id": "1c1ad222-5f9d-4eac-8c3a-eac37cd898a4",
+      "marketId": "market-3",
+      "userId": "2b8fb3ac-ffe5-47cc-8426-643148a3452d",
+      "deltaYes": 3,
+      "deltaNo": 0,
+      "cost": 1.556197,
+      "timestamp": 1764928415835
+    },
+    {
+      "id": "27a3b8da-b752-4cee-9d90-414da224e6b7",
+      "marketId": "market-4",
+      "userId": "2b8fb3ac-ffe5-47cc-8426-643148a3452d",
+      "deltaYes": 3,
+      "deltaNo": 0,
+      "cost": 1.556197,
+      "timestamp": 1764928447193
+    }
+  ]
 }

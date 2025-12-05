@@ -1,18 +1,50 @@
 [
   {
     "id": "market-1",
-    "title": "Will Bitcoin be above $100k on 2026-01-01?",
-    "description": "A simple binary market about BTC price.",
-    "qYes": 10,
-    "qNo": 5,
+    "title": "Will A. tell us at least three anecdotes?",
+    "description": "Binary market about Brazil",
+    "qYes": 0,
+    "qNo": 0,
     "b": 20
   },
   {
     "id": "market-2",
-    "title": "Will NASA launch a crewed mission in 2026?",
-    "description": "Event-based prediction.",
-    "qYes": 2,
-    "qNo": 8,
-    "b": 10
+    "title": "Will Louis show up with boat shoes on the first day?",
+    "description": "Event-based prediction",
+    "qYes": 0,
+    "qNo": 0,
+    "b": 20
+  },
+  {
+    "id": "market-3",
+    "title": "Will Arne drink chocolate milk at least 5 times?",
+    "description": "Event-based prediction",
+    "qYes": 0,
+    "qNo": 0,
+    "b": 20
+  },
+  {
+    "id": "market-4",
+    "title": "Will Fabian go into Tiffanies?",
+    "description": "Event-based prediction",
+    "qYes": 0,
+    "qNo": 0,
+    "b": 20
+  },
+  {
+    "id": "market-5",
+    "title": "Will at least one magnum bottle of champagne be ordered?",
+    "description": "Event-based prediction",
+    "qYes": 0,
+    "qNo": 0,
+    "b": 20
+  },
+  {
+    "id": "market-6",
+    "title": "Will someone explain that Wasn and Wiesn mean the same thing?",
+    "description": "Event-based prediction",
+    "qYes": 0,
+    "qNo": 0,
+    "b": 20
   }
 ]

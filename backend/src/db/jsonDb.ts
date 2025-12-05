@@ -58,9 +58,36 @@ export class JSONDB {
     return this.data.users.find(u => u.username === username);
   }
 
+  findUserById(id: string) {
+    return this.data.users.find(u => u.id === id);
+  }
+
+  getAllUsers() {
+    return this.data.users;
+  }
+
+  upsertUser(user: User) {
+    const idx = this.data.users.findIndex(u => u.id === user.id);
+    if (idx === -1) this.data.users.push(user);
+    else this.data.users[idx] = user;
+    this.save();
+  }
+
   addTrade(trade: Trade) {
     this.data.trades.push(trade);
     this.save();
+  }
+
+  getTotalSpentOnMarket(marketId: string): number {
+    return this.data.trades
+      .filter(t => t.marketId === marketId)
+      .reduce((sum, t) => sum + t.cost, 0);
+  }
+
+  getTotalSpentByUserOnMarket(userId: string, marketId: string): number {
+    return this.data.trades
+      .filter(t => t.marketId === marketId && t.userId === userId)
+      .reduce((sum, t) => sum + t.cost, 0);
   }
 }
 

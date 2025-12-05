@@ -4,6 +4,8 @@ import routes from './routes';
 import { db } from './db/jsonDb';
 import path from 'path';
 import fs from 'fs';
+import bcrypt from 'bcryptjs';
+import { v4 as uuidv4 } from 'uuid';
 
 const server = Fastify({ logger: true });
 
@@ -20,6 +22,21 @@ async function seed() {
       for (const m of seed) db.upsertMarket(m);
       server.log.info('Seeded markets');
     }
+  }
+
+  // Seed admin user if it doesn't exist
+  const adminExists = db.findUserByUsername('admin');
+  if (!adminExists) {
+    const adminUser = {
+      id: uuidv4(),
+      username: 'admin',
+      passwordHash: bcrypt.hashSync('admin', 8),
+      balance: 10000,
+      positions: {},
+      isAdmin: true
+    };
+    db.addUser(adminUser);
+    server.log.info('Seeded admin user (username: admin, password: admin)');
   }
 }
 

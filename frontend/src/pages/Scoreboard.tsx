@@ -23,13 +23,13 @@ export default function Scoreboard({ onBack }: { onBack: () => void }) {
           </tr>
         </thead>
         <tbody>
-          {scoreboard.map((user, idx) => (
-            <tr key={user.id} style={{ borderBottom: '1px solid #eee' }}>
-              <td style={{ padding: 8 }}>{idx + 1}</td>
-              <td style={{ padding: 8 }}>{user.username}</td>
-              <td style={{ padding: 8 }}>${user.balance.toFixed(2)}</td>
+          {scoreboard.length > 0 ? scoreboard.map((user, index) => (
+            <tr key={user.username}>
+              <td style={{ padding: 8 }}>{index + 1}</td>
+              <td style={{ padding: 8 }}>{user.username || 'Unknown'}</td>
+              <td style={{ padding: 8 }}>{user.balance != null ? user.balance.toFixed(2) : 'N/A'}</td>
             </tr>
-          ))}
+          )) : <tr><td colSpan={3} style={{ textAlign: 'center' }}>No data available</td></tr>}
         </tbody>
       </table>
     </div>

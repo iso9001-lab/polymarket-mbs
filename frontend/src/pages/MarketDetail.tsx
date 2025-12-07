@@ -136,10 +136,19 @@ export default function MarketDetail({ id, onBack, onTrade }: { id: string; onBa
             if (typeof res.trade?.cost === 'number') {
               setRemainingAllowance(prev => prev !== null ? Math.max(0, prev - res.trade.cost) : null);
             } else {
-              fetch(`/api/markets/${id}/allowance`, { headers: { 'x-user-id': userId } })
+              const headers: Record<string, string> = {};
+            if (userId) {
+              headers['x-user-id'] = userId;
+            }
+
+              fetch(`/api/markets/${id}/allowance`, { headers })
                 .then(r => r.json())
-                .then(d => { if (d && typeof d.remainingAllowance === 'number') setRemainingAllowance(d.remainingAllowance); })
-                .catch(() => {});
+                .then(d => {
+                  if (d && typeof d.remainingAllowance === 'number') {
+                    setRemainingAllowance(d.remainingAllowance);
+                  }
+              })
+              .catch(() => {});
             }
             
             setBalance(balance - res.trade.cost);

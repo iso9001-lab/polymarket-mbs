@@ -7,6 +7,14 @@
       "balance": 0,
       "positions": {},
       "isAdmin": true
+    },
+    {
+      "id": "17b0f965-b7cc-447f-a5c8-9fa8360af641",
+      "username": "Fabischoff",
+      "passwordHash": "$2a$08$ZWcvNobgTWh9yoZoONI4ROvjfygZi/UbSmUbR4rP23Cb3D7.BY1N2",
+      "balance": 1000,
+      "positions": {},
+      "isAdmin": false
     }
   ],
   "markets": [
@@ -14,7 +22,7 @@
       "id": "market-1",
       "title": "Will A. tell us at least three anecdotes?",
       "description": "Binary market about Brazil",
-      "qYes": 0,
+      "qYes": 10,
       "qNo": 0,
       "b": 50,
       "status": "open"
@@ -74,5 +82,15 @@
       "status": "open"
     }
   ],
-  "trades": []
+  "trades": [
+    {
+      "id": "145370b4-fc74-495f-94b1-ae19cc5e98b6",
+      "marketId": "market-1",
+      "userId": null,
+      "deltaYes": 10,
+      "deltaNo": 0,
+      "cost": 5.249584,
+      "timestamp": 1765141542164
+    }
+  ]
 }

@@ -31,7 +31,7 @@ async function seed() {
       id: uuidv4(),
       username: 'admin',
       passwordHash: bcrypt.hashSync('admin', 8),
-      balance: 10000,
+      balance: 0,
       positions: {},
       isAdmin: true
     };

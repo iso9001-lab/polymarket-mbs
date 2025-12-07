@@ -2,10 +2,10 @@
   {
     "id": "market-1",
     "title": "Will A. tell us at least three anecdotes?",
-    "description": "Binary market about Brazil",
+    "description": "Event-based prediction",
     "qYes": 0,
     "qNo": 0,
-    "b": 20
+    "b": 50
   },
   {
     "id": "market-2",
@@ -13,7 +13,7 @@
     "description": "Event-based prediction",
     "qYes": 0,
     "qNo": 0,
-    "b": 20
+    "b": 50
   },
   {
     "id": "market-3",
@@ -21,7 +21,7 @@
     "description": "Event-based prediction",
     "qYes": 0,
     "qNo": 0,
-    "b": 20
+    "b": 50
   },
   {
     "id": "market-4",
@@ -29,7 +29,7 @@
     "description": "Event-based prediction",
     "qYes": 0,
     "qNo": 0,
-    "b": 20
+    "b": 50
   },
   {
     "id": "market-5",
@@ -37,7 +37,7 @@
     "description": "Event-based prediction",
     "qYes": 0,
     "qNo": 0,
-    "b": 20
+    "b": 50
   },
   {
     "id": "market-6",
@@ -45,6 +45,14 @@
     "description": "Event-based prediction",
     "qYes": 0,
     "qNo": 0,
-    "b": 20
+    "b": 50
+  },
+  {
+    "id": "market-7",
+    "title": "Will Gianluca miss at least one day of lectures??",
+    "description": "Event-based prediction",
+    "qYes": 0,
+    "qNo": 0,
+    "b": 50
   }
 ]

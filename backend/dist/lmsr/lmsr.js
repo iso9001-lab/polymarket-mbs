@@ -6,30 +6,30 @@ exports.costToBuyDeltaYes = costToBuyDeltaYes;
 exports.costToBuyDeltaNo = costToBuyDeltaNo;
 exports.priceNo = priceNo;
 exports.findQuantityForExactCost = findQuantityForExactCost;
-function priceYes(qYes, qNo, b = 10) {
+function priceYes(qYes, qNo, b = 50) {
     const ey = Math.exp(qYes / b);
     const en = Math.exp(qNo / b);
     return ey / (ey + en);
 }
-function cost(qYes, qNo, b = 10) {
+function cost(qYes, qNo, b = 50) {
     return b * Math.log(Math.exp(qYes / b) + Math.exp(qNo / b));
 }
-function costToBuyDeltaYes(qYes, qNo, deltaYes, b = 10) {
+function costToBuyDeltaYes(qYes, qNo, deltaYes, b = 50) {
     const before = cost(qYes, qNo, b);
     const after = cost(qYes + deltaYes, qNo, b);
     return after - before;
 }
-function costToBuyDeltaNo(qYes, qNo, deltaNo, b = 10) {
+function costToBuyDeltaNo(qYes, qNo, deltaNo, b = 50) {
     const before = cost(qYes, qNo, b);
     const after = cost(qYes, qNo + deltaNo, b);
     return after - before;
 }
-function priceNo(qYes, qNo, b = 10) {
+function priceNo(qYes, qNo, b = 50) {
     const ey = Math.exp(qYes / b);
     const en = Math.exp(qNo / b);
     return en / (ey + en);
 }
-function findQuantityForExactCost(qYes, qNo, cash, b = 10, tradeType = 'yes') {
+function findQuantityForExactCost(qYes, qNo, cash, b = 50, tradeType = 'yes') {
     // Find delta such that costToBuyDelta(qYes,qNo,delta) = cash
     // Use binary search. Allow negative? only positive buys.
     const maxIter = 60;

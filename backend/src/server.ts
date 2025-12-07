@@ -46,6 +46,7 @@ const start = async () => {
   try {
     await seed();
     await server.listen({ port: PORT, host: '0.0.0.0' });
+    server.log.info(`Server running on port ${PORT}`);
   } catch (err) {
     server.log.error(err);
     process.exit(1);
